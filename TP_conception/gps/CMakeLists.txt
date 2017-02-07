@@ -15,7 +15,9 @@ pkg_check_modules( MYPKG REQUIRED libglog cpputest)
 include_directories( ${MYPKG_INCLUDE_DIRS} )
 add_executable( tests.out 
     src/Chemin.cpp 
+    src/Chemin_test.cpp 
     src/Route.cpp 
+    src/Route_test.cpp 
     src/tests.cpp )
 target_link_libraries( tests.out ${MYPKG_LIBRARIES} )
 

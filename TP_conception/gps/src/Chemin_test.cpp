@@ -1,3 +1,5 @@
+#include <CppUTest/CommandLineTestRunner.h>
+
 #include "Chemin.hpp"
 #include <fstream>
 #include <sstream>

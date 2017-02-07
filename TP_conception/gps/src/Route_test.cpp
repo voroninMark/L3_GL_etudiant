@@ -1,3 +1,5 @@
+#include <CppUTest/CommandLineTestRunner.h>
+
 #include "Route.hpp"
 
 TEST_GROUP(GroupRoute) { };
