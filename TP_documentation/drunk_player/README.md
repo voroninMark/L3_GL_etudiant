@@ -16,3 +16,5 @@ cd build
 cmake ..
 make 
 ```
+![](drunk_player_gui.png)
+[google](http://www.google.com)
