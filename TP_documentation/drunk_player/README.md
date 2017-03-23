@@ -6,10 +6,10 @@ drunk_player est composé:
 * d'une bibli
 * d'un programme graphique
 * d'une console
-#Dependances
+# Dependances
 * openCV
 * Boost
-#Compilation
+# Compilation
 
 
 I think you should use an
