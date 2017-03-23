@@ -10,11 +10,9 @@ drunk_player est composé:
 * openCV
 * Boost
 # Compilation
-
-
-
-`mkdir build
+///
+mkdir build
 cd build
 cmake ..
-make` 
-
+make 
+///
