@@ -3,7 +3,7 @@
 
 int main(int argc, char ** argv) {
 
-    // check command line arguments
+    //// check command line arguments
     if (argc != 2) {
         std::cerr << "usage: " << argv[0] << " <folder>\n";
         exit(-1);
@@ -11,7 +11,7 @@ int main(int argc, char ** argv) {
     const std::string progName = argv[0];
     const std::string folderName = argv[1];
 
-    // open files
+    //// open files
     DrunkPlayer player;
     try {
         player.loadFolder(folderName);
@@ -21,30 +21,30 @@ int main(int argc, char ** argv) {
         exit(-1);
     }
 
-    // init display
+    //// init display
     cv::namedWindow(progName);
     bool isPlaying = true;
 
-    // process video
+    //// process video
     cv::Mat imgVideo;
     while (true) {
 
-        // get frame
+        //// get frame
         if (isPlaying) {
             player >> imgVideo;
             if (player.isFinished())
                 break;
         }
 
-        // display frame 
+        //// display frame 
         cv::imshow(progName, imgVideo);
 
-        // handle time and keyboard
+        //// handle time and keyboard
         int k = cv::waitKey(33);    
         if (k % 0x100 == 27)
-            break; // quit if "esc"
+            break; //// quit if "esc"
         if (k % 0x100 == 32) 
-            isPlaying = not isPlaying; // play/pause if "space"
+            isPlaying = not isPlaying; //// play/pause if "space"
     }
 
     return 0;

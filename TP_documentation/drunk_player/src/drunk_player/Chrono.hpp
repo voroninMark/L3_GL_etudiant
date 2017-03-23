@@ -3,13 +3,13 @@
 
 #include <chrono>
 
-// Chronomètre pour mesurer des durées.
-// Exemple d'utilisation :
-// Chrono chrono;
-// chrono.start();
-// ...
-// chrono.stop();
-// std::cout << "temps écoulé : " << chrono.elapsed() << std::endl;
+/// Chronomètre pour mesurer des durées.
+/// Exemple d'utilisation :
+/// Chrono chrono;
+/// chrono.start();
+/// ...
+/// chrono.stop();
+/// std::cout << "temps écoulé : " << chrono.elapsed() << std::endl;
 class Chrono {
 
     private:
@@ -18,21 +18,21 @@ class Chrono {
         bool _isRunning;
 
     public:
-        // Constructeur.
+        /// Constructeur.
         Chrono();
 
-        // Remet la mesure à zéro.
-        // Ne change pas l'état démarré/arrêté du chronomètre.
+        /// Remet la mesure à zéro.
+        /// Ne change pas l'état démarré/arrêté du chronomètre.
         void reset();
 
-        // Remet à zéro et démarre une nouvelle mesure.
+        /// Remet à zéro et démarre une nouvelle mesure.
         void start();
 
-        // Arrête la mesure.
+        /// Arrête la mesure.
         void stop();
 
-        // Retourne le temps écoulé.
-        // Ne change pas l'état démarré/arrêté du chronomètre.
+        /// Retourne le temps écoulé.
+        /// Ne change pas l'état démarré/arrêté du chronomètre.
         double elapsed();
 };
 

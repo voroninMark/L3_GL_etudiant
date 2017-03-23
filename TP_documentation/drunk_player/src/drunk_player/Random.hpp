@@ -3,11 +3,11 @@
 
 #include <random>
 
-// Générateur de nombre pseudo-aléatoire (selon la loi uniforme).
-// Exemple d'utilisation :
-// Random rng;
-// int x = rng(42);
-// double y = rng();
+/// Générateur de nombre pseudo-aléatoire (selon la loi uniforme).
+/// Exemple d'utilisation :
+/// Random rng;
+/// int x = rng(42);
+/// double y = rng();
 class Random {
 
     private:
@@ -15,17 +15,17 @@ class Random {
         std::uniform_real_distribution<double> _distribution;
 
     public:
-        // Constructeur à utiliser.
+        /// Constructeur à utiliser.
         Random();
 
-        // Constructeur par copie interdit.
-        // Pour éviter les suites pseudo-aléatoires identiques.
+        /// Constructeur par copie interdit.
+        /// Pour éviter les suites pseudo-aléatoires identiques.
         Random(const Random &) = delete;
 
-        // Génère un nombre aléatoire réel dans [0,1).
+        /// Génère un nombre aléatoire réel dans [0,1).
         double operator()();
 
-        // Génère un nombre aléatoire entier dans [0,n).
+        /// Génère un nombre aléatoire entier dans [0,n).
         int operator()(int n);
 };
 

@@ -4,7 +4,7 @@
 
 int main(int argc, char ** argv) {
 
-    // check command line arguments
+    //// check command line arguments
     if (argc != 3) {
         std::cerr << "usage: " << argv[0] << " <folder> <output file>\n";
         exit(-1);
@@ -16,7 +16,7 @@ int main(int argc, char ** argv) {
     Chrono chrono;
     chrono.start();
 
-    // open files
+    //// open files
     DrunkPlayer player;
     try {
         player.loadFolder(folderName);
@@ -26,19 +26,19 @@ int main(int argc, char ** argv) {
         exit(-1);
     }
 
-    // open writer
+    //// open writer
     int size = player.getImageSize();
     cv::VideoWriter video(outputName, CV_FOURCC('M','J','P','G'), 30, 
             cv::Size(size, size));
 
-    // process video
+    //// process video
     cv::Mat imgVideo;
     while (true) {
-        // get frame
+        //// get frame
         player >> imgVideo;
         if (player.isFinished())
             break;
-        // output frame
+        //// output frame
         video.write(imgVideo);
     }
 

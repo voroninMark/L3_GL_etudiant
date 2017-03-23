@@ -12,6 +12,9 @@ drunk_player est composé:
 # Compilation
 
 
-I think you should use an
-`<addr>` element here instead.
+
+`mkdir build`
+`cd build`
+`cmake ..`
+`make` 
 
